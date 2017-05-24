@@ -31,3 +31,7 @@ erl_crash.dump
 /config/dev.secret.exs
 
 /doc
+
+# Don't add vagrant dev machine
+.vagrant
+ubuntu-zesty-17.04-cloudimg-console.log
