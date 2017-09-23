@@ -4,7 +4,7 @@ defmodule CodeStats.Mixfile do
   def project do
     [app: :code_stats,
      version: "1.8.3",
-     elixir: "~> 1.4.5",
+     elixir: "~> 1.4",
      elixirc_paths: elixirc_paths(Mix.env),
      compilers: [:phoenix, :gettext] ++ Mix.compilers,
      build_embedded: Mix.env == :prod,
@@ -45,7 +45,9 @@ defmodule CodeStats.Mixfile do
       {:ex_doc, "~> 0.15", only: :dev},
       {:calendar, "~> 0.17.2"},
       {:bamboo, "~> 0.8.0"},
-      {:corsica, "~> 1.0.0"}
+      {:corsica, "~> 1.0.0"},
+      {:idna, "~> 5.1.0", override: true}, # Fixes release build on otp 20
+      {:certifi, "~> 2.0.0", override: true}, # Fixes windows build
    ]
   end
 
